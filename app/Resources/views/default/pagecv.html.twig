@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block time %}
+<div style="width: 10%"></div>
+{% endblock time %}
+
+{% block body %}
+<div class="champ">
+  <time>Née le {{createDateDeNaissance|date("d/m/Y")}}</time>
+  {% if avoirPermis == true %}
+    <p>Permis B</p>
+  {% endif %}
+</div>
+
+<div class="mainsoustitre2">
+  <h2 class="soustitre">COMPETENCES</h2>
+</div>
+
+<div class="bloc1Competence row">
+  <div class="col-md-4">
+    <div class="titreLangage fa fa-code"><b> Langages</b></div>
+    {% for langage in langages %}
+    <p class="textBloc1Langage">{{ langage.langage}}</p>
+    {% endfor %}
+  </div>
+
+  <div class="col-md-4 textBdd">
+    <div class="titreLangage fa fa-database"><B> Base de données</b></div>
+    {% for langage in baseDeDonnees %}
+    <p>{{ langage.BaseDeDonnee}}</p>
+    {% endfor %}
+  </div>
+
+  <div class="col-md-4">
+    <div class="titreLangage fa fa-users"><b> Outils de gestion de projet</b></div>
+    {% for langage in langageModelisation %}
+    <p class="textLangageModel">{{ langage.langageModelisation}}</p>
+    {% endfor %}
+  </div>
+
+</div>
+
+<div class="mainsoustitre2">
+  <h2 class="soustitre">FORMATIONS</h2>
+</div>
+
+<div class="blocFormation row">
+  <div class="formation col-md-6">
+    {% for formation in formationsBloc1 %}
+    <div class="titre3"><b>{{ formation.titre }}</b></div>
+    <p>{{formation.description}} {{formation.dateDebut}} {{formation.dateFin}} {{formation.obtenue}}</p>
+    {% endfor %}
+  </div>
+
+  <div class="formation col-md-6">
+    {% for formation in formationBloc2 %}
+    <div class="titre3"><b>{{ formation.titre }}</b></div>
+    <p>{{formation.description}} {{formation.dateDebut}} {{formation.dateFin}} {{formation.obtenue}}</p>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="mainsoustitre2">
+  <h2 class="soustitre">EXPERIENCES PROFESSIONNELLES</h2>
+</div>
+
+<div class="blocExperience row">
+  {% for Experience in ExperiencesBloc1 %}
+  <div class="experience col-md-6">
+    <div class="titre2" ><b>{{ Experience.poste }}</b></div>
+    <p class="style">{{ Experience.entreprise}} {{Experience.dateDebut}} {{Experience.dateFin}} </p>
+    <p>{{Experience.secteur}}</p>
+    <p class="mission">{{Experience.mission}}</p>
+    <br>
+  </div>
+  {% endfor %}
+
+  {% for Experience in ExperiencesBloc2 %}
+  <div class="experience col-md-6">
+    <div class="titre2" ><b>{{ Experience.poste }}</b></div>
+    <p class="style">{{ Experience.entreprise}} {{Experience.dateDebut}} {{Experience.dateFin}} </p>
+    <p>{{Experience.secteur}}</p>
+    <p class="mission">{{Experience.mission}}</p>
+    <br>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
