@@ -1,10 +1,10 @@
 /* Page index */
 
-.PageAccueil{
+.pageAccueil{
   color: black;
 }
 
-.PageAccueil:hover{
+.pageAccueil:hover{
   color: #BEB4A8;
 }
 
@@ -13,13 +13,13 @@
 }
 
 .image{
-  width: 100%;
-  height: 100%
+  height: 645px;
+	max-width: auto;
 }
-  
+
 #titre {
-  margin-bottom:
-  20%;color: #FFFFFF
+  margin-bottom: 15%;
+  color: #FFFFFF
 }
 
 .carousel-overlay {
@@ -110,12 +110,6 @@
   margin-left: 5%
 }
 
-    /* @media (min-width: 768px) {
-        #wrapper { width: 80%; margin: 2em auto; }
-        #icon-book { display: inline-block; }
-        #status a, #next a { display: block; } */
-/* Fin Page index */
-
 /* Page pagecv */
 
 .champ {
@@ -185,3 +179,29 @@
   margin-right: 5%;
 }
 /* fin Page pagecv */
+@media all and (max-width: 320px){
+  .image{
+    height: 187px;;
+  	max-width: auto;
+  }
+}
+
+@media all and (max-width: 480px ){
+  .image{
+    height: 187px;;
+  	max-width: auto;
+  }
+}
+
+@media all and (max-width: 720px ){
+  .image{
+    height: 187px;;
+  	max-width: auto;
+  }
+}
+@media all and (max-width: 720px ){
+  .image{
+    height: 300px;;
+  	max-width: auto;
+  }
+}

@@ -13,7 +13,7 @@ use AppBundle\Entity\Competence;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/{_locale}", name="homepage")
      */
     public function indexAction(Request $request)
     {
@@ -24,7 +24,7 @@ class DefaultController extends Controller
     }
 
   	/**
-       * @Route("/pagecv", name="page-cv")
+       * @Route("/{_locale}/pagecv", name="page-cv")
        */
   	public function testAction()
   	{
@@ -32,17 +32,17 @@ class DefaultController extends Controller
       $age = new \DateTime('05-04-1991');
 
       $bep = new Formation();
-      $bep->setTitre("Brevet d'Etudes Professionnelles Logistique et Commercialisation");
-      $bep->setDateDebut("2008 à");
-      $bep->setDateFin("2010");
-      $bep->setDescription("Institut des métiers à Clermont - Ferrand de");
-      $bep->setObtenue("(Obtenu)");
+      $bep->setTitre("formation.1.titre");
+      $bep->setDateDebut("formation.1.dateDebut");
+      $bep->setDateFin("formation.1.dateFin");
+      $bep->setDescription("formation.1.description");
+      $bep->setObtenue("formation.1.obtenu");
       $adrec = new Formation();
-      $adrec->setTitre("Titre Professionnel Développeur Logiciel");
-      $adrec->setDateDebut("Septembre 2017 à");
-      $adrec->setDateFin("Mais 2018");
-      $adrec->setDescription("adrec à Clermont - Ferrand de");
-      $adrec->setObtenue("(En cours)");
+      $adrec->setTitre("formation.2.titre");
+      $adrec->setDateDebut("formation.2.dateDebut");
+      $adrec->setDateFin("formation.2.dateFin");
+      $adrec->setDescription("formation.2.description");
+      $adrec->setObtenue("formation.2.obtenu");
 
       $apprenti = new Experience();
       $apprenti->setPoste("Apprenti Magasinier Cariste");
@@ -84,7 +84,7 @@ class DefaultController extends Controller
        générés par les machines.");
 
        $langage = new Competence;
-       $langage->setLangage("Shell (Bash) / MySQL / JAVA 7 / HTML 5 / CSS 3 / PHP 5 / Javascript / symfony 3(framework PHP)");
+       $langage->setLangage("Shell (Bash) / MySQL / JAVA 7 / HTML 5 / CSS 3 / PHP 5 / Javascript / symfony 3 (framework PHP)");
        $langage->setBaseDeDonnee("MySql");
        $langage->setLangageModelisation("UML (Unified Modeling Language) Github");
 
@@ -102,7 +102,7 @@ class DefaultController extends Controller
   	}
 
     /**
-       * @Route("/monsite", name="monTest")
+       * @Route("/{_locale}/monsite", name="monTest")
        */
     public function monSite()
     {

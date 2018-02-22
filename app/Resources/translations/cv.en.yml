@@ -1,0 +1,19 @@
+titleCompetence: "SKILLS"
+titleFormation: "TRAININGS"
+titleExpePro: "PROFESSIONAL EXPERIENCES"
+bdd: "database"
+uml: "Project Management Tools"
+formation:
+   1:
+     titre: 'Certificate of Professional Studies logistics and marketing'
+     dateDebut: "2008 to"
+     dateFin: "2010"
+     description: "Institut des métiers in Clermont - Ferrand from"
+     obtenu: "(obtained)"
+
+   2:
+     titre: " professional diploma software developer"
+     dateDebut: "September 2017 to"
+     dateFin: "May 2018"
+     description: "adrec in Clermont - Ferrand from"
+     obtenu: "(En cours)"

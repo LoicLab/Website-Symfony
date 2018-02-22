@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+{% trans_default_domain 'cv' %}
 
 {% block time %}
 <div style="width: 10%"></div>
@@ -13,7 +14,7 @@
 </div>
 
 <div class="mainsoustitre2">
-  <h2 class="soustitre">COMPETENCES</h2>
+  <h2 class="soustitre">{{'titleCompetence' |trans}}</h2>
 </div>
 
 <div class="bloc1Competence row">
@@ -25,14 +26,14 @@
   </div>
 
   <div class="col-md-4 textBdd">
-    <div class="titreLangage fa fa-database"><B> Base de données</b></div>
+    <div class="titreLangage fa fa-database"><B> {{'bdd' |trans}}</b></div>
     {% for langage in baseDeDonnees %}
     <p>{{ langage.BaseDeDonnee}}</p>
     {% endfor %}
   </div>
 
   <div class="col-md-4">
-    <div class="titreLangage fa fa-users"><b> Outils de gestion de projet</b></div>
+    <div class="titreLangage fa fa-users"><b> {{'uml' |trans}}</b></div>
     {% for langage in langageModelisation %}
     <p class="textLangageModel">{{ langage.langageModelisation}}</p>
     {% endfor %}
@@ -41,27 +42,27 @@
 </div>
 
 <div class="mainsoustitre2">
-  <h2 class="soustitre">FORMATIONS</h2>
+  <h2 class="soustitre">{{'titleFormation' |trans}}</h2>
 </div>
 
 <div class="blocFormation row">
   <div class="formation col-md-6">
     {% for formation in formationsBloc1 %}
-    <div class="titre3"><b>{{ formation.titre }}</b></div>
-    <p>{{formation.description}} {{formation.dateDebut}} {{formation.dateFin}} {{formation.obtenue}}</p>
+    <div class="titre3"><b>{{ formation.titre |trans }}</b></div>
+    <p>{{formation.description |trans }} {{formation.dateDebut |trans }} {{formation.dateFin |trans }} {{formation.obtenue |trans }}</p>
     {% endfor %}
   </div>
 
   <div class="formation col-md-6">
     {% for formation in formationBloc2 %}
-    <div class="titre3"><b>{{ formation.titre }}</b></div>
-    <p>{{formation.description}} {{formation.dateDebut}} {{formation.dateFin}} {{formation.obtenue}}</p>
+    <div class="titre3"><b>{{ formation.titre |trans }}</b></div>
+    <p>{{formation.description |trans}} {{formation.dateDebut |trans}} {{formation.dateFin |trans}} {{formation.obtenue |trans}}</p>
     {% endfor %}
   </div>
 </div>
 
 <div class="mainsoustitre2">
-  <h2 class="soustitre">EXPERIENCES PROFESSIONNELLES</h2>
+  <h2 class="soustitre">{{'titleExpePro' |trans}}</h2>
 </div>
 
 <div class="blocExperience row">

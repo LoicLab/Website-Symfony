@@ -1,0 +1,19 @@
+titleCompetence: "COMPETENCE"
+titleFormation: "FORMATIONS"
+titleExpePro: "EXPERIENCES PROFESSIONNELLES"
+bdd: "Base de données"
+uml: "Outils de gestion de projet"
+formation:
+   1:
+     titre: 'Brevet d''Etudes Professionnelles Logistique et Commercialisation'
+     dateDebut: "2008 à"
+     dateFin: "2010"
+     description: "Institut des métiers à Clermont - Ferrand de"
+     obtenu: "(Obtenu)"
+
+   2:
+     titre: "Titre Professionnel Développeur Logiciel"
+     dateDebut: "Septembre 2017 à"
+     dateFin: "Mai 2018"
+     description: "adrec à Clermont - Ferrand de"
+     obtenu: "(En cours)"
