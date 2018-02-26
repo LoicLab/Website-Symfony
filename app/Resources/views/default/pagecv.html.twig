@@ -68,20 +68,20 @@
 <div class="blocExperience row">
   {% for Experience in ExperiencesBloc1 %}
   <div class="experience col-md-6">
-    <div class="titre2" ><b>{{ Experience.poste }}</b></div>
-    <p class="style">{{ Experience.entreprise}} {{Experience.dateDebut}} {{Experience.dateFin}} </p>
-    <p>{{Experience.secteur}}</p>
-    <p class="mission">{{Experience.mission}}</p>
+    <div class="titre2" ><b>{{ Experience.poste |trans }}</b></div>
+    <p class="style">{{ Experience.entreprise |trans }} {{Experience.dateDebut |trans }} {{Experience.dateFin |trans }} </p>
+    <p>{{Experience.secteur |trans }}</p>
+    <p class="mission">{{Experience.mission |trans }}</p>
     <br>
   </div>
   {% endfor %}
 
   {% for Experience in ExperiencesBloc2 %}
   <div class="experience col-md-6">
-    <div class="titre2" ><b>{{ Experience.poste }}</b></div>
-    <p class="style">{{ Experience.entreprise}} {{Experience.dateDebut}} {{Experience.dateFin}} </p>
-    <p>{{Experience.secteur}}</p>
-    <p class="mission">{{Experience.mission}}</p>
+    <div class="titre2" ><b>{{ Experience.poste |trans }}</b></div>
+    <p class="style">{{ Experience.entreprise |trans }} {{Experience.dateDebut |trans }} {{Experience.dateFin |trans }} </p>
+    <p>{{Experience.secteur |trans }}</p>
+    <p class="mission">{{Experience.mission |trans }}</p>
     <br>
   </div>
   {% endfor %}

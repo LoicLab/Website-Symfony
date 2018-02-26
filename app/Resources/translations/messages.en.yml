@@ -1,10 +1,16 @@
 pageHome: "Homepage"
 pageCv: "My C.V."
-pageFormulaire: "Form"
+pageFormulaire: "contact me"
 sentence: "TRAINING SOFTWARE DEVELOPER AT ADREC"
 profil: "PERSONAL PROFILE"
-paragraph: "Fascinated by computers for several years,"
-paragraph2: "After this year of study, i wish to build my career in this domain. During in a internship in a Startup Arkima,i will obtain my first professional experience in computer programming.
- In june 2018, i will be in research of enployment as software developper. "
+paragraph: 'Fascinated by computing for several years,
+i am currently in professional retraining to the Adrec
+for obtain the Professional Diploma of Software Developer.'
+
+paragraph2: "After this year of study, i wish to build my career in this
+domain. During in a internship in a Startup Arkima,i will obtain my first
+professional experience in computer programming.
+In june 2018, i will be in research of employment as software developper."
+
 paragraph3: "From June 2018"
-paragraph4: ' I would be looking for a job as a "Software Developer".'
+paragraph4: ', i would be looking for a job as a "Software Developer".'

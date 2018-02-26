@@ -1,11 +1,45 @@
 /* Page index */
 
+progress {
+  width: 100%;
+  -webkit-appearance: none;
+  position: fixed;
+  z-index:50;
+  height: 3px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+
+
 .pageAccueil{
   color: black;
+  font-size: 1.3em;
 }
 
 .pageAccueil:hover{
-  color: #BEB4A8;
+  color: #D3A87C;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.paddingButton {
+  padding-right: 10px;
+}
+
+.middleButton {
+  color: black;
+  font-size: 1em;
+}
+
+.middleButton:hover{
+  color: #D3A87C;
+  text-decoration: none;
+  transition-duration: 0.5s;
 }
 
 .carousel-item{
@@ -98,6 +132,22 @@
   font-family: 'Source Sans Pro',Helvetica,Arial,sans-serif;
 }
 
+#animationTexte {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+  from {
+    padding-left: 25%;
+  }
+
+  to {
+    padding-left: 1%;
+  }
+}
+
 .profile {
   width: 225px;
   transform: rotate(90deg);
@@ -179,6 +229,39 @@
   margin-right: 5%;
 }
 /* fin Page pagecv */
+
+/* Page formulaire */
+
+.positionTitre{
+  margin-top: 3%;
+}
+
+.blocForm {
+  font-size: 20px;
+  background-color: #0B5963;
+  padding: 40px;
+  border-radius: 10px solid black;
+  margin-top: 5%;
+
+}
+
+.row2 {
+  margin-bottom: 3%;
+}
+
+.blocMessage {
+  justify-content: center;
+}
+
+.message{
+  font-size: 16px;
+  color: #0069d6;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 3%;
+}
+
+/* fin Page formulaire */
 @media all and (max-width: 320px){
   .image{
     height: 187px;;
@@ -194,14 +277,12 @@
 }
 
 @media all and (max-width: 720px ){
+  .profile {
+    display: block;
+    margin: auto;
+  }
   .image{
     height: 187px;;
-  	max-width: auto;
-  }
-}
-@media all and (max-width: 720px ){
-  .image{
-    height: 300px;;
   	max-width: auto;
   }
 }

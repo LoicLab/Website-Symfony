@@ -1,8 +1,8 @@
-titleCompetence: "COMPETENCE"
-titleFormation: "FORMATIONS"
-titleExpePro: "EXPERIENCES PROFESSIONNELLES"
+titleCompetence: "COMPETENCES"
 bdd: "Base de données"
 uml: "Outils de gestion de projet"
+
+titleFormation: "FORMATIONS"
 formation:
    1:
      titre: 'Brevet d''Etudes Professionnelles Logistique et Commercialisation'
@@ -15,5 +15,47 @@ formation:
      titre: "Titre Professionnel Développeur Logiciel"
      dateDebut: "Septembre 2017 à"
      dateFin: "Mai 2018"
-     description: "adrec à Clermont - Ferrand de"
+     description: "Adrec à Clermont - Ferrand de"
      obtenu: "(En cours)"
+
+titleExpePro: "EXPERIENCES PROFESSIONNELLES"
+experienceBloc2:
+  1:
+    poste: "Apprenti Magasinier Cariste"
+    entreprise: "J.Sauret à Clermont - Ferrand /"
+    dateDebut: "Juin 2008 à"
+    dateFin: "Juin 2010"
+    secteur: 'Secteur : Automobile : Commerce et réparation d''automobiles et motocycles'
+    mission: 'Missions : Réception colis et déchargement des palettes, expédition colis et
+    chargement des palettes, mises en stock, préparation de commandes, gestion des
+    transports, connaissance des produits automobiles.'
+
+  2:
+    poste: "Magasinier Cariste - CDI"
+    entreprise: "Auversun à Clermont - Ferrand /"
+    dateDebut: "Octobre 2010 à"
+    dateFin: "Novembre 2012"
+    secteur: "Secteur : Energie renouvelable : Conception et fabrication de panneaux solaires"
+    mission: 'Missions :  Préparation de commandes, réception et expédition de colis et de palettes, mise en stock,
+     inventaire, contact avec la clientèle, chargement et déchargement de camions sur quai ou à l''extérieur, manutention de grande longueur
+     ou palette, création manuelle et informatique de bons de livraison, bons de préparation et remplissage bons de transport.'
+
+experienceBloc1:
+  1:
+    poste: "Magasinier Cariste - CDD"
+    entreprise: "Gedimat à Clermont - Ferrand /"
+    dateDebut: "Mars 2013 à"
+    dateFin: "Mai 2013"
+    secteur: "Secteur : Bâtiment : Vente de matériaux de construction et de bricolage"
+    mission: "Missions : Préparation de commandes, réception et expédition de colis et de palettes,
+     chargement et déchargement de camions, contact avec la clientèle
+     permanent, mise en stock et connaissance des produits du bâtiment."
+
+  2:
+    poste: "Agent de Fabrication - CDI"
+    entreprise: "Constellium à Issoire /"
+    dateDebut: "Depuis Juin 2013"
+    secteur: "Secteur : Métallurgie – Sidérurgie : Fabrication de produits en aluminium"
+    mission: 'Missions : Conduite de machines industrielles, manutention avec pont roulant et chariot élévateur du métal,
+     préparation de programmes d''alimentation pour les machines, expédition et alimentation des machines, gestion des flux de copeaux
+     générés par les machines.'

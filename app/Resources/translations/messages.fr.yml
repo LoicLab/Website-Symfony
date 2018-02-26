@@ -1,12 +1,17 @@
 pageHome: "Page accueil"
 pageCv: "Mon C.V."
-pageFormulaire: "Formulaire"
+pageFormulaire: "Contactez-moi"
 sentence: 'EN FORMATION DEVELOPPEUR LOGICIEL A L''ADREC'
 profil: 'PROFIL PERSONNEL'
-paragraph: 'Passionné par l''informatique depuis plusieurs années, je suis actuellement en reconversion professionnelle à l''Adrec
+paragraph: 'Passionné par l''informatique depuis plusieurs années,
+je suis actuellement en reconversion professionnelle à l''Adrec
 afin d''obtenir le Titre Professionnel Développeur Logiciel.'
-paragraph2: 'Par la suite, je souhaite m''épanouir en construisant ma carrière autour de ce domaine et en développant mes
-connaissances. C''est au cours d''un stage de 2 mois dans la start-up Arkima que je vais acquérir ma première expérience
+
+paragraph2: 'Par la suite, je souhaite m''épanouir en construisant
+ma carrière autour de ce domaine et en développant mes
+connaissances. C''est au cours d''un stage de 2 mois dans la start-up Arkima
+que je vais acquérir ma première expérience
 professionnelle dans le développement.'
+
 paragraph3: "A partir de juin 2018"
 paragraph4: ', je serais à la recherche d''un emploi en tant que "Dévelopeur Logiciel"'
