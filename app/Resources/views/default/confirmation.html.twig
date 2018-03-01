@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain 'contact' %}
+
+{% block time %}
+<div style="width: 10%"></div>
+{% endblock time %}
+
+{% block body %}
+
+<div class="soustitre positionTitre">
+  <h2>{{ 'titreForm' | trans}}</h2>
+</div>
+
+<div class="styleMsg">
+  <p class="msgConfirm">Votre message a été envoyé avec succès</p>
+</div>
+
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}

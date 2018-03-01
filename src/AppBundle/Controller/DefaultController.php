@@ -9,6 +9,15 @@ use Symfony\Component\HttpFoundation\Response;
 use AppBundle\Entity\Formation;
 use AppBundle\Entity\Experience;
 use AppBundle\Entity\Competence;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\ButtonType;
+use Symfony\Component\Validator\Constraints;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\Email;
 
 class DefaultController extends Controller
 {
@@ -104,9 +113,120 @@ class DefaultController extends Controller
     /**
        * @Route("/{_locale}/contactez-moi", name="contactezMoi")
        */
-    public function pageForm()
+    public function contactAction(Request $request, $_locale, \Swift_Mailer $mailer)
     {
-      return $this->render('default/formulaire.html.twig');
+      $formBuilder = $this-> createFormbuilder();
+      $formBuilder
+        ->add ('nom', TextType::class, [
+          'required' => true,
+          'label' => 'form.nom',
+          'translation_domain' => 'contact',
+          'constraints'=> [
+            new NotBlank (),
+            new Length ([
+              'min'=>2,
+              'max'=>100,
+            ]),
+        ],
+      ])
+        ->add ('prenom', TextType::class, [
+          'required' => true,
+          'label' => 'form.prenom',
+          'translation_domain' => 'contact',
+          'constraints'=> [
+            new NotBlank (),
+            new Length ([
+              'min'=>2,
+              'max'=>100,
+            ]),
+          ],
+        ])
+        ->add ('entreprise', TextType::class, [
+          'required' => true,
+          'label' => 'form.entreprise',
+          'translation_domain' => 'contact',
+          'constraints'=> [
+            new Length ([
+              'min'=>0,
+              'max'=>100,
+            ]),
+          ],
+        ])
+        ->add ('email', EmailType::class, [
+          'required' => true,
+          'label' => 'form.email',
+          'translation_domain' => 'contact',
+          'constraints'=> [
+            new Email(),
+            new Length ([
+              'min'=>6,
+              'max'=>255,
+            ]),
+          ]
+        ])
+        ->add ('listeDeroulante', ChoiceType::class, [
+          'required' => true,
+          'label' => 'form.listeDeroulante.label',
+          'translation_domain' => 'contact',
+          'choices'=> [
+            'form.listeDeroulante.contact'=>'contact',
+            'form.listeDeroulante.information'=>'information',
+            'form.listeDeroulante.bug'=>'bug',
+            'form.listeDeroulante.rdv'=>'rdv',
+          ]])
+          ->add ('message', TextareaType::class, [
+            'required' => true,
+            'label' => 'form.message',
+            'translation_domain' => 'contact',
+            'constraints'=> [
+              new Length ([
+                'min'=>10,
+                'max'=>300,
+              ]),
+            ]
+          ]);
+
+          $form = $formBuilder->getForm();
+          $form->handleRequest($request);
+
+          if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData();
+
+            $data['nom'];
+            $data['prenom'];
+            $data['entreprise'];
+            $data['email'];
+            $data['listeDeroulante'];
+            $data['message'];
+
+            $message = new \Swift_Message($data['listeDeroulante']);
+            $message->setReplyTo($data['email']);
+            $message->setFrom('labas.loic@gmail.com');
+            $message->setTo('labas.loic@gmail.com');
+            $message->setBody($data['nom']);
+            $message->setBody($data['prenom']);
+            $message->setBody($data['entreprise']);
+            $message->setBody($data['message']);
+
+            $mailer->send($message);
+
+            return $this->redirectToRoute("Confirmation", [
+              '_locale' => $_locale,
+              'data' => $data,
+            ]);
+          }
+
+      return $this->render('default/formulaire.html.twig', [
+        'form' => $form -> createView()
+      ]);
+    }
+
+    /**
+       * @Route("/{_locale}/Confirm", name="Confirmation")
+       */
+    public function successContactAction()
+    {
+      return $this->render('default/confirmation.html.twig');
     }
 
 }

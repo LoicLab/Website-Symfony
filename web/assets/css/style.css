@@ -1,21 +1,5 @@
 /* Page index */
 
-progress {
-  width: 100%;
-  -webkit-appearance: none;
-  position: fixed;
-  z-index:50;
-  height: 3px;
-}
-
-progress[value]::-webkit-progress-bar {
-  background-color: #eee;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-}
-
-
-
 .pageAccueil{
   color: black;
   font-size: 1.3em;
@@ -44,6 +28,7 @@ progress[value]::-webkit-progress-bar {
 
 .carousel-item{
   max-width: 100%;
+  background-size: cover;
 }
 
 .image{
@@ -67,15 +52,15 @@ progress[value]::-webkit-progress-bar {
   z-index: 0;
   background-color: rgba(0,0,0,.35);
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .name {
-  font-size: 4em
+  font-size: 4em;
 }
 
 .sentence {
-  font-size: 2em
+  font-size: 2em;
 }
 
 .name, .sentence, .soustitre {
@@ -106,7 +91,7 @@ progress[value]::-webkit-progress-bar {
 }
 
 .color-icon-git{
-  color: white
+  color: white;
 }
 
 .color-icon-git:hover {
@@ -127,6 +112,11 @@ progress[value]::-webkit-progress-bar {
   margin: 0 auto;
 }
 
+.blocProfil {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .texte{
   padding-right: 10%;
   font-family: 'Source Sans Pro',Helvetica,Arial,sans-serif;
@@ -140,7 +130,7 @@ progress[value]::-webkit-progress-bar {
 
 @keyframes slidein {
   from {
-    padding-left: 25%;
+    padding-left: 20%;
   }
 
   to {
@@ -153,11 +143,10 @@ progress[value]::-webkit-progress-bar {
   transform: rotate(90deg);
   border: 2px solid black;
   margin-bottom: 20%;
-  margin-left: 10%;
 }
 
 .description {
-  margin-left: 5%
+  margin-left: 5%;
 }
 
 /* Page pagecv */
@@ -181,6 +170,8 @@ progress[value]::-webkit-progress-bar {
 
  .bloc1Competence{
    text-align: center;
+   margin-right: 0px;
+   margin-left: 0px;
  }
 
  .textBloc1Langage{
@@ -205,6 +196,8 @@ progress[value]::-webkit-progress-bar {
 
 .blocExperience, .blocFormation {
   margin-left: 1%;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .experience {
@@ -224,10 +217,6 @@ progress[value]::-webkit-progress-bar {
  text-decoration: underline;
  color: grey;
 }
-
-.mission {
-  margin-right: 5%;
-}
 /* fin Page pagecv */
 
 /* Page formulaire */
@@ -236,42 +225,38 @@ progress[value]::-webkit-progress-bar {
   margin-top: 3%;
 }
 
-.blocForm {
-  font-size: 20px;
-  background-color: #0B5963;
-  padding: 40px;
-  border-radius: 10px solid black;
-  margin-top: 5%;
-
-}
-
-.row2 {
-  margin-bottom: 3%;
-}
-
-.blocMessage {
-  justify-content: center;
-}
-
-.message{
-  font-size: 16px;
-  color: #0069d6;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-bottom: 3%;
+.styleForm {
+  margin-top: 2%;
 }
 
 /* fin Page formulaire */
+
+/* Page confirmation */
+
+.styleMsg {
+  margin-top: 5%;
+}
+
+.msgConfirm {
+  text-align: center;
+  font-size: 1.5em;
+  width: 35%;
+  margin: 0 auto;
+  border-radius: 2px black;
+}
+
+/* fin Page confirmation */
+
 @media all and (max-width: 320px){
-  .image{
-    height: 187px;;
+    #carouselExampleControls .image{
+    height: 574px;
   	max-width: auto;
   }
 }
 
 @media all and (max-width: 480px ){
-  .image{
-    height: 187px;;
+  #carouselExampleControls .image{
+    height: 187px;
   	max-width: auto;
   }
 }
@@ -282,7 +267,7 @@ progress[value]::-webkit-progress-bar {
     margin: auto;
   }
   .image{
-    height: 187px;;
+    height: 187px;
   	max-width: auto;
   }
 }

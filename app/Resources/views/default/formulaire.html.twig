@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-{% trans_default_domain 'cv' %}
+{% trans_default_domain 'contact' %}
 
 {% block time %}
 <div style="width: 10%"></div>
@@ -8,60 +8,26 @@
 {% block body %}
 
 <div class="soustitre positionTitre">
-  <h2>Contactez-moi<h2>
+  <h2>{{ 'titreForm' | trans}}</h2>
 </div>
 
-<div class="container">
-  <div class="blocForm">
+<div class="container styleForm">
 
-    <form >
-      <div class="form-row">
-        <div class="col-md-4 mb-4">
-          <label for="validationDefault01"></label>
-          <input type="text" class="form-control" id="validationDefault01" placeholder="Nom" required>
-          <div class="invalid-feedback">
-          </div>
-        </div>
+  {% form_theme form 'bootstrap_4_layout.html.twig'%}
+    {{ form_start (form)}}
 
-        <div class="col-md-4 mb-4">
-          <label for="validationDefault02"></label>
-          <input type="text" class="form-control" id="validationDefault02" placeholder="Prénom"  required>
-          <div class="invalid-feedback">
-          </div>
-        </div>
+     <div class="row justify-content-around">
+      {{ form_row (form.nom) }}
+      {{ form_row (form.prenom) }}
+      {{ form_row (form.entreprise) }}
+     </div>
+      {{ form_row (form.email) }}
+      {{ form_row (form.listeDeroulante) }}
+      {{ form_row (form.message) }}
 
-        <div class="col-md-4 mb-4">
-          <label for="validationDefault03"></label>
-          <input type="text" class="form-control" id="validationDefault03" placeholder="Entreprise"  required>
-          <div class="invalid-feedback">
-          </div>
-        </div>
-
-      </div>
-      <div class="form-row row2">
-        <div class="col-md-6 mb-3">
-          <label for="validationDefault04"></label>
-          <input type="email" class="form-control" id="validationDefault04" placeholder="nom@exemple.com" required>
-          <div class="invalid-feedback">
-          </div>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <label for="validationDefault05"></label>
-          <input type="number" class="form-control" id="validationDefault05" placeholder="Téléphone" required>
-          <div class="invalid-feedback">
-          </div>
-        </div>
-      </div>
-
-      <div class="row blocMessage">
-        <textarea class="message" name="message" id="textArea" rows="4" cols="87" placeholder="Votre message"></textarea>
-      </div>
-
-      <button class="btn btn-primary" type="submit">Envoyer</button>
-    </form>
-
-  </div>
+  <button class="btn btn-primary" type="submit">{{'form.bouton' |trans}}</button>
+      {{ form_end(form) }}
+      
 </div>
 {% endblock %}
 

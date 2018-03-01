@@ -1,0 +1,14 @@
+titreForm: "Contactez-moi"
+form:
+    nom: "Nom"
+    prenom: "Prénom"
+    entreprise: "Entreprise"
+    email: "Email"
+    listeDeroulante:
+       label: "Objet"
+       contact: "Contact"
+       information: 'Demande d''informations'
+       bug: "Signaler un bug"
+       rdv: "Prise de rendez-vous"
+    message: "Message"
+    bouton: "Envoyer"

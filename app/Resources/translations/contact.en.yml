@@ -1,0 +1,14 @@
+titreForm: "Contact-me"
+form:
+    nom: "Lastname"
+    prenom: "Firstname"
+    entreprise: "Company"
+    email: "Email"
+    listeDeroulante:
+       label: "Subject"
+       contact: "Contact"
+       information: 'Information request'
+       bug: "Report a bug"
+       rdv: "Making appointments"
+    message: "Message"
+    bouton: "Send"
