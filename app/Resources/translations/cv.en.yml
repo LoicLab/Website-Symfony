@@ -26,23 +26,22 @@ experienceBloc2:
     dateDebut: "June 2008 to"
     dateFin: "June 2010"
     secteur: 'Sector : Automobile : business and repair of car and motorcycle'
-    mission: 'Job : Réception colis et déchargement des palettes, expédition colis et
-    chargement des palettes, mises en stock, préparation de commandes, gestion des
-    transports, connaissance des produits automobiles.'
+    mission: 'Job : Package reception and unloading of pallets, shipment of package and lading of pallets ,
+    placing in storage of products, order preparations, transport management , knowledge of automobile products.'
 
   2:
-    poste: "Magasinier Cariste - Permanent Contract"
+    poste: "Storekeeper and forklift operator - Permanent Contract"
     entreprise: "Auversun in Clermont - Ferrand /"
     dateDebut: "October 2010 to"
     dateFin: "November 2012"
     secteur: "Sector : Energie renouvelable : Conception et fabrication de panneaux solaires"
-    mission: 'Job :  Préparation de commandes, réception et expédition de colis et de palettes, mise en stock,
+    mission: 'Job :  Order preparations, réception et expédition de colis et de palettes, mise en stock,
      inventaire, contact avec la clientèle, chargement et déchargement de camions sur quai ou à l''extérieur, manutention de grande longueur
      ou palette, création manuelle et informatique de bons de livraison, bons de préparation et remplissage bons de transport.'
 
 experienceBloc1:
   1:
-    poste: "Magasinier Cariste - Given Contract "
+    poste: "Storekeeper and forklift operator - Given Contract "
     entreprise: "Gedimat in Clermont - Ferrand /"
     dateDebut: "March 2013 to"
     dateFin: "May 2013"
@@ -52,7 +51,7 @@ experienceBloc1:
      permanent, mise en stock et connaissance des produits du bâtiment."
 
   2:
-    poste: "Agent de Fabrication - Permanent Contract"
+    poste: "Processing agent - Permanent Contract"
     entreprise: "Constellium in Issoire /"
     dateDebut: "Since June 2013"
     secteur: "Sector : Metallurgy – Steel Industry : Aluminum product manufacturing"

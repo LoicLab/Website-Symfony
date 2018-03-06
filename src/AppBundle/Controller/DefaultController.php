@@ -200,14 +200,13 @@ class DefaultController extends Controller
             $data['message'];
 
             $message = new \Swift_Message($data['listeDeroulante']);
-            $message->setReplyTo($data['email']);
-            $message->setFrom('labas.loic@gmail.com');
-            $message->setTo('labas.loic@gmail.com');
+            $message->setFrom($data['email']);
+            $message->setTo('phoenixloic@yahoo.fr');
             $message->setBody($data['nom']);
             $message->setBody($data['prenom']);
             $message->setBody($data['entreprise']);
             $message->setBody($data['message']);
-
+            
             $mailer->send($message);
 
             return $this->redirectToRoute("Confirmation", [

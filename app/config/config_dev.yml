@@ -38,4 +38,4 @@ monolog:
         #    level: info
 
 swiftmailer:
-   delivery_addresses: ['labas.loic@gmail.com']
+   delivery_addresses: ['phoenixloic@yahoo.fr']
